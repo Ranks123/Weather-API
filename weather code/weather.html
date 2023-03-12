@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <style>
+      /* AccuWeather Body Styling */
+      body {
+        background-image: url('https://images.unsplash.com/photo-1519085364737-cc0264372e7e');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .weather-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: "Helvetica Neue", sans-serif;
+        background-color: rgba(255,255,255,0.8);
+        padding: 2rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(10px);
+        max-width: 500px;
+        margin: 0 auto;
+      }
+
+      .weather-title {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        color: #444;
+      }
+
+      .weather-form {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+      }
+
+      .weather-label {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-right: 1rem;
+        color: #333;
+      }
+
+      .weather-input {
+        font-size: 1.2rem;
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 0.25rem;
+        box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.1);
+        background-color: rgba(255,255,255,0.9);
+        color: #333;
+        width: 100%;
+      }
+
+      .weather-button {
+        font-size: 1.2rem;
+        background-color: #0072c6;
+        color: #fff;
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 0.25rem;
+        cursor: pointer;
+        box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.1);
+        transition: background-color 0.2s ease-in-out;
+      }
+
+      .weather-button:hover {
+        background-color: #005ea2;
+      }
+
+      .weather-info {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-top: 1rem;
+        text-align: center;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="weather-container">
+      <h1 class="weather-title">Weather App</h1>
+      <form id="location-form" class="weather-form">
+        <label for="location" class="weather-label">Enter a location:</label>
+        <input type="text" id="location" class="weather-input" required>
+        <button type="submit" class="weather-button">Get Weather</button>
+      </form>
+      <div id="weather-info" class="weather
+-info"></div>
+    </div>
+    <script src="weather.js"></script>
+  </body>
+</html>
+
+
